@@ -8,6 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <style>
+        /* ==========================================
+           1. VARIÁVEIS DE TEMA & MODO ESCURO
+           ========================================== */
         :root {
             --primary: #0f172a;
             --accent: #2563eb;
@@ -26,6 +29,9 @@
             --title-color: #38bdf8;
         }
 
+        /* ==========================================
+           2. RESET & ESTILOS BASE
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
@@ -39,6 +45,9 @@
             color: var(--text-color);
         }
 
+        /* ==========================================
+           3. AVISO & HEADER
+           ========================================== */
         .aviso-inauguracao {
             background: linear-gradient(90deg, #8b5cf6, #ec4899);
             color: white;
@@ -98,6 +107,9 @@
             font-size: 14px;
         }
 
+        /* ==========================================
+           4. SLIDER TOPO & BANNER HERO
+           ========================================== */
         .slider-topo {
             background: var(--orange);
             color: white;
@@ -125,12 +137,6 @@
             padding: 60px 20px;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         .tag-inauguracao {
             background: rgba(255, 255, 255, 0.25);
             padding: 6px 16px;
@@ -149,6 +155,9 @@
             font-weight: 800;
         }
 
+        /* ==========================================
+           5. CAMPO DE BUSCA
+           ========================================== */
         .busca {
             max-width: 700px;
             margin: -25px auto 30px auto;
@@ -172,6 +181,9 @@
             border-color: var(--accent);
         }
 
+        /* ==========================================
+           6. SEÇÃO DE PRODUTOS & CARDS
+           ========================================== */
         .produtos {
             max-width: 1200px;
             margin: auto;
@@ -185,7 +197,6 @@
             color: var(--title-color);
         }
 
-        /* GRID: 3 COLUNAS NO PC, 1 NO CELULAR */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -193,13 +204,6 @@
             align-items: stretch;
         }
 
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
-
-        /* CARD UNIFORME */
         .card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -218,7 +222,7 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
-        /* CARROSEL DE IMAGEM AJUSTADO */
+        /* CARROSEL DE IMAGEM DO PRODUTO */
         .product-carousel {
             position: relative;
             width: 100%;
@@ -281,12 +285,6 @@
             animation: pulse 1.5s infinite;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-            100% { transform: scale(1); }
-        }
-
         .info {
             padding: 20px;
             display: flex;
@@ -328,6 +326,9 @@
             transform: scale(1.03);
         }
 
+        /* ==========================================
+           7. COMPONENTES FLUTUANTES E FOOTER
+           ========================================== */
         .toast-notificacao {
             position: fixed;
             bottom: 90px;
@@ -371,12 +372,6 @@
             animation: bounce 2s infinite;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
         footer {
             background: var(--primary);
             color: white;
@@ -386,20 +381,47 @@
             font-size: 14px;
         }
 
+        /* ==========================================
+           8. ANIMAÇÕES & RESPONSIVIDADE
+           ========================================== */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
     </style>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN7DCW6X34"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZN7DCW6X34');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZN7DCW6X34');
     </script>
-
 </head>
 <body>
 
@@ -424,22 +446,21 @@
     </section>
 
     <section class="banner">
-    <span class="tag-inauguracao">✨ Loja Novinha no Ar</span>
+        <span class="tag-inauguracao">✨ Loja Novinha no Ar</span>
 
-    <h2 style="font-size:22px; margin-bottom:10px;">
-        👋 Sejam Bem-vindos!
-    </h2>
+        <h2 style="font-size:22px; margin-bottom:10px;">
+            👋 Sejam Bem-vindos!
+        </h2>
 
-    <h1>🛒 Util_Facil</h1>
+        <h1>🛒 Util_Facil</h1>
 
-    <p>
-        Encontre cabos, carregadores, fones e acessórios com preços especiais.
-    </p>
+        <p>Encontre cabos, carregadores, fones e acessórios com preços especiais.</p>
 
-    <p style="margin-top:10px; font-weight:bold;">
-        🚀 Aproveite nossas ofertas de lançamento!
-    </p>
-</section>
+        <p style="margin-top:10px; font-weight:bold;">
+            🚀 Aproveite nossas ofertas de lançamento!
+        </p>
+    </section>
+
     <div class="busca">
         <input type="text" id="campoBusca" onkeyup="filtrarProdutos()" placeholder="🔍 O que você está procurando hoje?">
     </div>
@@ -449,9 +470,9 @@
 
         <div class="grid" id="gridProdutos">
 
-            <div class="card" data-nome="suporte para moto">
+            <!-- PRODUTO 1 -->
+            <div class="card" data-nome="cabo usb v8">
                 <div class="product-carousel">
-                    
                     <img src="imagens/cabo_kkivee.png" class="active" alt="Cabo_KIVEE_USB_TP/V8">
                     <img src="imagens/cabo_kiiveV8.png" alt="Cabo_KIVEE_USB_TP/V8_2">
                     <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
@@ -459,9 +480,7 @@
                 </div>
                 <div class="info">
                     <div>
-                        <h3>Cabo Micro USB V8 Kivee (KV-091)
-                            Carrega e transfere dados Corrente: 3.4A Comprimento: 1 Metro Material resistente
-                        </h3>
+                        <h3>Cabo Micro USB V8 Kivee (KV-091) Carrega e transfere dados Corrente: 3.4A Comprimento: 1 Metro Material resistente</h3>
                         <div class="preco">R$ 8,00</div>
                     </div>
                     <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Cabo_USB/TPV8%20para%20celular">
@@ -470,6 +489,7 @@
                 </div>
             </div>
 
+            <!-- PRODUTO 2 -->
             <div class="card" data-nome="cabo inova de iPhone">
                 <div class="product-carousel">
                     <img src="imagens/cabo_aifone.png" class="active" alt="cabo_de_iPhone">
@@ -480,6 +500,7 @@
                 <div class="info">
                     <div>
                         <h3>🔌Cabo inova iPhone 1M saida 3.1A- KV-5827</h3>
+                        
                         <div class="preco">R$ 9,80</div>
                     </div>
                     <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Cabo de iphone%20USB">
@@ -488,6 +509,7 @@
                 </div>
             </div>
 
+            <!-- PRODUTO 3 -->
             <div class="card" data-nome="fone inova">
                 <div class="product-carousel">
                     <img src="imagens/fone_inova.png" class="active" alt="Fone Inova">
@@ -497,8 +519,7 @@
                 </div>
                 <div class="info">
                     <div>
-                        <h3>🎧 Fone Inova c/ Microfone (FON-2154D)
-Som claro e microfone no cabo para chamadas.</h3>
+                        <h3>🎧 Fone Inova c/ Microfone (FON-2154D) Som claro e microfone no cabo para chamadas.</h3>
                         <div class="preco">R$ 6,00</div>
                     </div>
                     <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Fone%20Inova">
@@ -507,9 +528,9 @@ Som claro e microfone no cabo para chamadas.</h3>
                 </div>
             </div>
 
+            <!-- PRODUTO 4 -->
             <div class="card" data-nome="carregador turbo inova">
                 <div class="product-carousel">
-                
                     <img src="imagens/carregador_inovafrente.png" class="active" alt="Carregador Turbo">
                     <img src="imagens/carregaor_inova_verso.png" alt="Carregador Turbo Verso">
                     <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
@@ -526,9 +547,9 @@ Som claro e microfone no cabo para chamadas.</h3>
                 </div>
             </div>
 
+            <!-- PRODUTO 5 -->
             <div class="card" data-nome="pelicula 3d">
                 <div class="product-carousel">
-                    
                     <img src="imagens/cabo_tc.png" class="active" alt="Cabo_Inova_TP/C">
                     <img src="imagens/cabo_tcv.png" alt="Cabo_Inova_TP/C">
                     <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
@@ -545,9 +566,9 @@ Som claro e microfone no cabo para chamadas.</h3>
                 </div>
             </div>
 
+            <!-- PRODUTO 6 -->
             <div class="card" data-nome="cabo p2 p2 auxiliar">
                 <div class="product-carousel">
-                    
                     <img src="imagens/cabo_p2p2.png" class="active" alt="Cabo P2 P2">
                     <img src="imagens/cabo-P22.png" alt="Cabo P2 P2 Verso">
                     <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
@@ -564,11 +585,177 @@ Som claro e microfone no cabo para chamadas.</h3>
                 </div>
             </div>
 
+            <!-- PRODUTO 7 -->
+            <div class="card" data-nome="CUBO_MAGICO ">
+                <div class="product-carousel">
+                    <img src="imagens/cubo_magico.png" class="active" alt="cubo_magico">
+                    <img src="imagens/cubo_certo.png" alt="cubo_certo">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Cubo Mágico 3x3 Colorido Desenvolve raciocínio lógico, concentração e coordenação.</h3>
+                        <div class="preco">R$ 7,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Cubo%20Magico">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUTO 8 -->
+            <div class="card" data-nome="Amoeba_Eslaine ">
+                <div class="product-carousel">
+                    <img src="imagens/moeba.png" class="active moeba" alt="moeba">
+                    <img src="imagens/moeba_verso.png" class="moeba_verso" alt="moeba_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Slime Amoeba 110g Geleca Textura Elastica Cores Sortidas Display 12 Asca Toys</h3>
+                        <div class="preco">R$ 10,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20na%20Slime%20Amoeba">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUTO 9 -->
+            <div class="card" data-nome="boneca ">
+                <div class="product-carousel">
+                    <img src="imagens/boneca.png" class="active boneca" alt="boneca">
+                    <img src="imagens/boneca_verso.png" class="boneca_verso" alt="boneca_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Kit Bonequinhas com acessórios Troca Roupa</h3>
+                        <div class="preco">R$ 15,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20na%20Bonequinha%20com%Acessorios">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUTO 10 -->
+            <div class="card" data-nome="kit_relogio + carteira ">
+                <div class="product-carousel">
+                    <img src="imagens/kit_relogio.png" class="active boneca" alt="kit_relogio">
+                    <img src="imagens/kit_verso.png" class="boneca_verso" alt="kit_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Kit Relógio de Pulso Infantil Digital + Carteira para meninas e meninos Criança</h3>
+                        <div class="preco">R$ 15,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Kit%20Relogio%+Carteira">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUTO 11 -->
+            <div class="card" data-nome="kit_boneco hero Squad ">
+                <div class="product-carousel">
+                    <img src="imagens/Boneco.png" class="active boneca" alt="kit_boneco">
+                    <img src="imagens/boneco-verso.png" class="boneca_verso" alt="kit_boneco">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Kit de Bonecos Ranger Hero Squad Wellmix Com</h3>
+                        <div class="preco">R$ 15,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Kit%20Boneco%+Hero Squad">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUTO 12 (Duplicado conforme original) -->
+            <div class="card" data-nome="carro_cast">
+                <div class="product-carousel">
+                    <img src="imagens/carro_cast.jpeg" class="active boneca" alt="carro_cast">
+                    <img src="imagens/carro_cast_verso.jpeg" class="boneca_verso" alt="carro_cast_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Carrinho Miniatura De Ferro DIE-CAST Miniaturas Colecionáveis 1 Peça </h3>
+                        <div class="preco">R$ 13,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Carro%20Die%+Cast">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>    
+            <div class="card" data-nome="caneca_infantil">
+                <div class="product-carousel">
+                    <img src="imagens/caneca_infantil.png" class="active Caneca" alt="Caneca">
+                    <img src="imagens/caneca_verso.png" class="caneca_verso" alt="caneca_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Kit Caneca Infatil Baby Colorido Carinha Infantil</h3>
+                        <div class="preco">R$ 13,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Caneca%20Infantil%+Carinha">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div> 
+              <div class="card" data-nome="kit_colorindo">
+                <div class="product-carousel">
+                    <img src="imagens/kit_colorindo.png" class="active kit_colorindo" alt="kit_colorindo">
+                    <img src="imagens/kit_colorindo_verso.png" class="kit_colorindo_verso" alt="kit_colorindo_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Kit Colorindo - 1cx Giz de Cera + 4 desenhos de colorir</h3>
+                        <div class="preco">R$ 10,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20no%20Caneca%20Infantil%+Carinha">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>    
+                <div class="card" data-nome="mine_tela">
+                <div class="product-carousel">
+                    <img src="imagens/mine_tela.png" class="active mine_tela" alt="mine_tela">
+                    <img src="imagens/mine_tela_verso.png" class="caneca_verso" alt="mine_tela_verso">
+                    <button class="carousel-btn prev" onclick="mudarFoto(this, -1)">❮</button>
+                    <button class="carousel-btn next" onclick="mudarFoto(this, 1)">❯</button>
+                </div>
+                <div class="info">
+                    <div>
+                        <h3>Mini Tela de Pintura c/ Cavalete Dino</h3>
+                        <div class="preco">R$ 14,00</div>
+                    </div>
+                    <a class="btn" target="_blank" onclick="dispararConfeti()" href="https://wa.me/5592984137890?text=Olá,%20tenho%20interesse%20na%20Mine%20Tela%+de%20Pintura">
+                        Comprar no WhatsApp 🚀
+                    </a>
+                </div>
+            </div>    
+
+
         </div>
     </section>
 
     <div id="toast" class="toast-notificacao">
-       
+        👀 <span id="toast-texto">Alguém de Manaus acabou de ver o Carregador Turbo!</span>
     </div>
 
     <a href="https://wa.me/5592984137890" class="whatsapp" target="_blank" aria-label="WhatsApp">💬</a>
@@ -576,12 +763,13 @@ Som claro e microfone no cabo para chamadas.</h3>
     <footer>
         <h3>🛒 Util_Facil</h3>
         <p>📍Retirada imediata ou agendada</p>
-        <p>📱 WhatsApp: (92) 984137890</p>
+        <p>📱 WhatsApp: (92) 98413-7890</p>
         <p>💳 Pix, Dinheiro e Cartão</p>
         <p>© 2026 Todos os direitos reservados</p>
     </footer>
 
     <script>
+        // MODO ESCURO / CLARO
         function alternarTema() {
             document.body.classList.toggle('dark-mode');
             const btn = document.querySelector('.theme-btn');
@@ -592,6 +780,7 @@ Som claro e microfone no cabo para chamadas.</h3>
             }
         }
 
+        // CONFETI DE COMPRA
         function dispararConfeti() {
             if (typeof confetti === 'function') {
                 confetti({
@@ -602,6 +791,7 @@ Som claro e microfone no cabo para chamadas.</h3>
             }
         }
 
+        // FILTRO DE BUSCA
         function filtrarProdutos() {
             let input = document.getElementById('campoBusca').value.toLowerCase();
             let cards = document.querySelectorAll('.card');
@@ -616,8 +806,8 @@ Som claro e microfone no cabo para chamadas.</h3>
             });
         }
 
+        // TOAST / NOTIFICAÇÃO FLUTUANTE
         const mensagens = [
-            "⚡ Alguém acabou de pedir informação via WhatsApp!",
             "📍 Retiradas agendadas de forma rápida e segura!"
         ];
 
@@ -637,6 +827,7 @@ Som claro e microfone no cabo para chamadas.</h3>
 
         setInterval(exibirToast, 10000);
 
+        // SLIDER DE TEXTO NO TOPO
         let slidesTopo = document.querySelectorAll(".slide-topo");
         let atualTopo = 0;
 
@@ -646,7 +837,7 @@ Som claro e microfone no cabo para chamadas.</h3>
             slidesTopo[atualTopo].classList.add("ativo");
         }, 3000);
 
-        /* CARROSEL AUTOMÁTICO */
+        // CARROSEL AUTOMÁTICO DE IMAGENS
         setInterval(() => {
             document.querySelectorAll('.product-carousel').forEach(carousel => {
                 let imgs = carousel.querySelectorAll('img');
@@ -659,7 +850,7 @@ Som claro e microfone no cabo para chamadas.</h3>
             });
         }, 3500);
 
-        /* TROCA MANUAL DAS FOTOS */
+        // CARROSEL MANUAL DE IMAGENS (BOTÕES DE SETA)
         function mudarFoto(btn, direcao) {
             let container = btn.parentElement;
             let imgs = container.querySelectorAll('img');
